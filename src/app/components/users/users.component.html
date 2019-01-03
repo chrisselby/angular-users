@@ -1,0 +1,18 @@
+<h2>List of Users</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users"
+            [class.selected]="user === currentUser">
+            <td>
+                <a routerLink="/users/{{ user.id }}">
+                    {{ user.first_name + ' ' + user.last_name }}
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
