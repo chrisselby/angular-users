@@ -3,15 +3,20 @@
     <thead>
         <tr>
             <th>Name</th>
+            <th>Address</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let user of users"
-            [class.selected]="user === currentUser">
+            [class.selected]="user === currentUser"
+            routerLink="/users/{{ user.id }}">
             <td>
                 <a routerLink="/users/{{ user.id }}">
                     {{ user.first_name + ' ' + user.last_name }}
                 </a>
+            </td>
+            <td>
+                {{ user.address | userAddress }}
             </td>
         </tr>
     </tbody>
