@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+*
+    box-sizing: border-box
+    
 body
     background: lighten(black, 80)
     margin: 0px
@@ -8,3 +11,35 @@ body
 
 h1
     margin: 0px
+
+form
+    label, input
+        display: block
+    div
+        margin-top: 10px
+    .radio
+        margin-top: 2px
+
+        label, input
+            display: inline-block
+    .action-buttons
+        margin-top: 20px
+
+button
+    cursor: pointer
+    display: inline-block
+    font-size: 15px
+    background: none
+    border: 1px solid
+    border-radius: 5px
+    margin-right: 5px
+
+    &.good
+        background: green
+    &.serious-danger
+        background: red
+    &.mild-danger
+        background: yellow
+
+table
+    width: 100%

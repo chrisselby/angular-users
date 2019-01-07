@@ -3,7 +3,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { User } from './models/user';
+import { User } from '../../models/user';
 
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -50,6 +50,20 @@ export class UserService {
         return this.http.put(url, user, httpOptions).pipe(
             catchError(this.handleError<any>('deleteHero'))
         );
+    }
+
+    searchUsers(query: string): Observable<User[]> {
+        if (!query.trim()) {
+            return this.http.get<User[]>(`${this.usersPath}${this.filters}`)
+                .pipe(
+                    catchError(this.handleError('getUsers', []))
+                );
+        }
+
+        return this.http.get<User[]>(`${this.usersPath}${this.filters}&q=${query}`)
+            .pipe(
+                catchError(this.handleError('searchUsers', []))
+            );
     }
 
     /**

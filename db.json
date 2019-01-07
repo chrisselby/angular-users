@@ -36,7 +36,7 @@
       "deleted": false,
       "age": 23,
       "order_total": {
-        "amount": 66700,
+        "amount": 66714,
         "currency": "GBP"
       }
     },
@@ -56,8 +56,8 @@
       "deleted": false,
       "age": 38,
       "order_total": {
-        "amount": 456123,
-        "currency": "INR"
+        "amount": "456123",
+        "currency": "EUR"
       }
     },
     {
@@ -117,7 +117,7 @@
       "age": 19,
       "order_total": {
         "amount": 33322200,
-        "currency": "INR"
+        "currency": "EUR"
       }
     },
     {
@@ -181,7 +181,7 @@
       }
     },
     {
-      "id": 9,
+      "id": 10,
       "first_name": "Edward",
       "last_name": "Martin",
       "address": {

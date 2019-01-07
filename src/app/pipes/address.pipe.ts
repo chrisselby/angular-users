@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Address } from './models/address';
+import { Address } from '../models/address';
 /*
  * Raise the value exponentially
  * Takes an exponent argument that defaults to 1.
@@ -12,7 +12,6 @@ import { Address } from './models/address';
 @Pipe({name: 'userAddress'})
 export class UserAddressPipe implements PipeTransform {
   transform(value: Address): string {
-    console.log(value);
     let returnedAddress = value.address1;
     if(value.address2) {
         returnedAddress += ', ' + value.address2;
