@@ -1,5 +1,6 @@
 <h2>Login</h2>
 <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="label error" *ngIf="loginError">Login info incorrect.</div>
     <div>
         <label>Email</label>
         <input [(ngModel)]="login.email" name="email" placeholder="Email" required="true">

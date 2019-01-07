@@ -5,19 +5,26 @@
 <table class="table">
     <thead>
         <tr>
+            <th>ID</th>
             <th>Name</th>
+            <th>Gender</th>
             <th>Address</th>
             <th>Order Total</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let user of users$ | async"
-            [class.selected]="user === currentUser"
             routerLink="/users/{{ user.id }}">
+            <td>
+                {{ user.id }}
+            </td>
             <td>
                 <a routerLink="/users/{{ user.id }}">
                     {{ user.first_name + ' ' + user.last_name }}
                 </a>
+            </td>
+            <td>
+                {{ user.gender | lowercase }}
             </td>
             <td>
                 {{ user.address | userAddress }}

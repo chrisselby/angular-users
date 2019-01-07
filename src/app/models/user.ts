@@ -8,4 +8,5 @@ export class User {
     address: Address;
     deleted: boolean;
     order_total: Currency;
+    amount_string: string;
 }

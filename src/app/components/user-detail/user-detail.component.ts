@@ -31,21 +31,21 @@ export class UserDetailComponent implements OnInit {
         this.userService.getUser(id)
             .subscribe(user => {
                 let userInfo = user;
-                userInfo.order_total.amount = Number(this.splitAmount(userInfo.order_total.amount));
+                userInfo.amount_string = this.splitAmount(userInfo.order_total.amount);
                 this.user = userInfo;
             });
     }
 
     save(): void {
         let userData = this.user;
-        let splitAmount = userData.order_total.amount.toString().split('.');
+        let splitAmount = userData.amount_string.split('.');
         userData.order_total.amount = Number(splitAmount[0] + splitAmount[1]);
         this.userService.updateUser(userData)
             .subscribe(() => this.cancel());
     }
 
     delete(): void {
-        if(window.confirm('You sure bro?')) {
+        if(window.confirm('Are you sure you want to delete this user?')) {
             this.userService.deleteUser(this.user)
                 .subscribe(() => this.cancel());
         }

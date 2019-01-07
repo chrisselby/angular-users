@@ -13,7 +13,7 @@
       },
       "profile_image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Creative-Tail-People-businness-man.svg",
       "gender": "MALE",
-      "deleted": true,
+      "deleted": false,
       "age": 28,
       "order_total": {
         "amount": 15788,
@@ -36,14 +36,14 @@
       "deleted": false,
       "age": 23,
       "order_total": {
-        "amount": 66714,
+        "amount": 66715,
         "currency": "GBP"
       }
     },
     {
       "id": 3,
       "first_name": "Paul",
-      "last_name": "Jones",
+      "last_name": "Smith",
       "address": {
         "address1": "123 Main St.",
         "address2": "#1",
@@ -56,7 +56,7 @@
       "deleted": false,
       "age": 38,
       "order_total": {
-        "amount": "456123",
+        "amount": 456123,
         "currency": "EUR"
       }
     },
