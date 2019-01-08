@@ -5,6 +5,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { User } from '../../models/user';
 
+import { environment } from '../../../environments/environment';
+
 const httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -14,7 +16,7 @@ const httpOptions = {
 })
 export class UserService {
 
-    private usersPath = 'http://localhost:3000/users';
+    private usersPath = (environment.production) ? 'https://angular-users.herokuapp.com/users' : 'http://localhost:3000/users';
     private filters = '?deleted=false';
 
 

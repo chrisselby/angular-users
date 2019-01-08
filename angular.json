@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "snapcheck-project": {
+    "angular-users": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/snapcheck-project",
+            "outputPath": "dist/angular-users",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "snapcheck-project:build"
+            "browserTarget": "angular-users:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "snapcheck-project:build:production"
+              "browserTarget": "angular-users:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "snapcheck-project:build"
+            "browserTarget": "angular-users:build"
           }
         },
         "test": {
@@ -106,7 +106,7 @@
         }
       }
     },
-    "snapcheck-project-e2e": {
+    "angular-users-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "snapcheck-project:serve"
+            "devServerTarget": "angular-users:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "snapcheck-project:serve:production"
+              "devServerTarget": "angular-users:serve:production"
             }
           }
         },
@@ -135,5 +135,5 @@
       }
     }
   },
-  "defaultProject": "snapcheck-project"
+  "defaultProject": "angular-users"
 }
