@@ -16,7 +16,8 @@ const httpOptions = {
 })
 export class UserService {
 
-    private usersPath = (environment.production) ? 'https://angular-users.herokuapp.com/users' : 'http://localhost:3000/users';
+    private basePath = (environment.production) ? 'https://angular-users.herokuapp.com' : 'http://localhost:3000';
+    private usersPath = this.basePath + '/api/users';
     private filters = '?deleted=false';
 
 

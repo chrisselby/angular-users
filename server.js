@@ -5,7 +5,7 @@ const path = require('path');
 
 const port = process.env.PORT || 3000;
 
-const command = `json-server --watch db.json --port ${port}`;
+const command = `json-server --watch db.json --port ${port} --routes json-server-routes.json`;
 
 exec(command, (err, stdout, stderr) => {
   if (err) {
