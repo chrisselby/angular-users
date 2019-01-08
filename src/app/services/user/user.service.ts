@@ -16,7 +16,7 @@ const httpOptions = {
 })
 export class UserService {
 
-    private basePath = (environment.production) ? 'https://my-json-server.typicode.com/chrisselby/angular-users' : 'http://localhost:3000';
+    private basePath = (environment.production) ? 'https://nameless-temple-18465.herokuapp.com' : 'http://localhost:3000';
     private usersPath = this.basePath + '/users';
     private filters = '?deleted=false';
 

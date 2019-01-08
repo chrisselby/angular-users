@@ -1,20 +1,6 @@
 // Install express server
-const { exec } = require('child_process');
 const express = require('express');
 const path = require('path');
-
-// const port = process.env.PORT || 3000;
-
-// const command = `json-server --watch db.json --port ${port} --routes json-server-routes.json`;
-//
-// exec(command, (err, stdout, stderr) => {
-//   if (err) {
-//     console.log('Error running exec', err);
-//     return;
-//   }
-//   console.log('stdout:', stdout);
-//   console.log('stderr:', stderr);
-// });
 
 const app = express();
 
